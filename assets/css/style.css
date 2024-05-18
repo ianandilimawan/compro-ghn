@@ -1,0 +1,789 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Outfit:wght@400;700&family=Outfit:wght@600&display=swap');
+@font-face {
+    font-family: 'Blibli_Medium';
+    src: url('../font/Blibli\ Medium.otf') format('truetype');
+}
+@font-face {
+    font-family: 'Blibli_Normal';
+    src: url('../font/Blibli\ Normal.otf') format('truetype');
+}
+@font-face {
+    font-family: 'Blibli_Light';
+    src: url('../font/Blibli\ Light.otf') format('truetype');
+}
+@font-face {
+    font-family: 'Blibli_Bold';
+    src: url('../font/Blibli\ Bold.otf') format('truetype');
+}
+:root {
+    --primaryBlue: rgba(0, 114, 255, 1);
+    --primaryBlack: rgba(56, 57, 82, 1);
+    --primaryYellow: #F7A400;
+    --primaryDarkBlue: #14176C;
+    --primaryMutedBlack: rgba(62, 64, 115, 1);
+    --primaryGrey: #B3B6C1;
+}
+.ff-inter-med {
+    font-family: 'Inter';
+    font-weight: 500;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+header .header-blue, .header-white {
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+header .header-blue {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background-color:  var(--primaryBlue);
+    justify-content: flex-end;
+    gap: 30px;
+    font-size: 14px;
+}
+header .header-white {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: white;
+    justify-content: space-between;
+    width: 100%;
+}
+header .header-blue a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: 'Blibli_Light';
+}
+header .header-blue .lang a {
+    color: var(--primaryGrey);
+}
+header .header-blue .lang a.active {
+    color: white;
+}
+header .header-blue a i {
+    margin-right: 2px;
+}
+header .header-blue .lang {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+}
+header .header-white .menus {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 30px;
+    font-size: 18px;
+    line-height: 22.5px;
+}
+header .header-white .menus a {
+    text-decoration: none;
+    padding: 5px !important;
+    font-family: 'Inter';
+    font-weight: 500;
+    color: var(--primaryBlue);
+    text-transform: capitalize;
+}
+.header-white img {
+    width: 80px;
+    height: auto;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+.nav-footer {
+    background-color: var(--primaryBlue);
+    padding: 10px 0px;
+}
+.nav-footer .footer-a {
+    background-color: var(--primaryBlue);
+    color: white;
+    padding: 10px 1rem;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 14px;
+}
+.nav-footer .lang span img {
+    width: 20px;
+    height: auto;
+}
+.nav-footer .lang {
+    gap: 10px;
+    background-color: var(--primaryBlue);
+    color: white;
+    border-radius: 2px;
+    padding: 10px 1rem;
+    align-items: baseline;
+}
+.nav-footer .lang .lang-text {
+    gap: .25rem!important;
+    font-size: 14px;
+}
+.nav-footer .lang span {
+    color: var(--primaryGrey);
+    font-size: 14px;
+}
+.nav-footer .lang a {
+    color: var(--primaryGrey);
+    text-decoration: none;
+    font-size: 14px;
+}
+.nav-footer .lang a.active {
+    color: white;
+}
+
+/* .header-white img {
+    width: auto;
+    height: 100px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+} */
+.scrolled {
+    transform: scale(0.85) !important;
+}
+.offcanvas {
+    max-width: 90% !important;
+    height: 100vh;
+}
+.offcanvas-backdrop {
+    height: 102vh;
+}
+#home .home-banner {
+    background-image: url('../img/bg-banner.webp');
+    width: 100%;
+    min-height: 100vh;
+    height: max-content;
+    background-size: cover;
+    background-position: center;
+}
+#home .container {
+    padding: 250px 0px 200px 100px;
+}
+#home .container .text-banner {
+    width: 50%
+}
+#home .container .text-banner h1 {
+    color: var(--primaryBlue);
+    text-transform: capitalize;
+    font-family: 'Outfit';
+    font-weight: 700;
+    line-height: 55px;
+    font-size: 55px;
+    margin-bottom: 0;
+}
+#home .container .text-banner h3 {
+    font-family: 'Blibli_Medium';
+    font-weight: normal;
+    font-size: 20px;
+    color: var(--primaryBlack);
+    line-height: 22px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.img-partner {
+    width: 150px;
+    height: auto;
+}
+.img-partner.circle {
+    width: 100px;
+    height: auto;
+}
+#about .about-banner {
+    background-image: url('../img/bg-about.webp');
+    width: 100%;
+    min-height: 100vh ;
+    height: max-content;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+#about .about-banner .banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+#about .about-banner .banner-container .img-about {
+    max-width: 100%;
+    height: auto;
+    width: 600px;
+}
+#about .about-banner .banner-container .about-text {
+    width: 25%;
+}
+#about .about-banner .banner-container .about-text .text-title {
+    color: var(--primaryBlue);
+    font-family: 'Blibli_Medium';
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+#about .about-banner .banner-container .about-text article h1 {
+    margin-top: 13px;
+    margin-bottom: 39px;
+    font-family: 'Blibli_Bold';
+    font-size: 44px;
+    line-height: 48px;
+    color: var(--primaryBlack);
+}
+#about .about-banner .banner-container .about-text article p {
+    margin-bottom: 0;
+    font-family: 'Blibli_Medium';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+#vision .vision-banner {
+    background-image: url('../img/bg-visi.webp');
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
+#vision .vision-banner .vision-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+#vision .vision-banner .vision-container .vision-text {
+    width: 35%;
+}
+#vision .vision-banner .vision-container .vision-text h2.text-title {
+    font-family: 'Blibli_Bold';
+    font-weight: 700;
+    font-size: 17px;
+    color: white;
+    line-height: 18.75px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#vision .vision-banner .vision-container .vision-text h2.header-title {
+    font-family: 'Blibli_Bold';
+    font-weight: 700;
+    font-size: 44px;
+    color: white;
+    line-height: 48px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+#vision .vision-banner .vision-container .vision-text article h3.sub-title {
+    font-family: 'Outfit';
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+    color: white;
+}
+#vision .vision-banner .vision-container .vision-text article h3.sub-title .img-sub-title {
+    max-width: 100%;
+    height: auto;
+    margin-right: 13px
+}
+#vision .vision-banner .vision-container .vision-text article span.arrow-list {
+    margin-right: 5px;
+    font-size: 12px;
+}
+#vision .vision-banner .vision-container .vision-text article p.content {
+    font-family: 'Blibli_Medium';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    padding-left: 85px;
+    color: white;
+    display: flex;
+    gap: 5px;
+    letter-spacing: 0.05em;
+
+}
+#vision .vision-banner .vision-container .img-visi {
+    padding-top: 100px;
+    max-width: 100%;
+    height: auto;
+}
+#value .value-banner {
+    background-image: url('/assets/img/BG.webp');
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+}
+#value .value-banner .value-container {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    flex-direction: column;
+}
+#value .value-banner .value-container .value-text {
+    display: flex;
+    align-items: end;
+}
+#value .value-banner .value-container .value-text article {
+    width: 430px;
+    /* margin-left: 200px; */
+}
+#value .value-banner .value-container .value-text article h2.sub-title {
+    color: var(--primaryYellow);
+    text-transform: uppercase;
+    font-family: 'Blibli_Bold';
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+#value .value-banner .value-container .value-text article h2.title {
+    font-family: 'Outfit';
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: 34px;
+    text-transform: capitalize;
+    color: var(--primaryBlue);
+}
+#value .value-banner .value-container .value-text article p.text {
+    font-family: 'Blibli_Medium';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: left;
+    color: var(--primaryBlack);
+    margin-bottom: 0;
+}
+#value .value-card {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-top: 70px;
+    gap: 100px;
+}
+#value .value-card .card {
+    width: 249px;
+    height: 324px;
+    padding: 20px;
+    background: #0072FF;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    position: relative;
+    box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+    transition: all 0.3s ease-out;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#value .value-card .card .card-body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+#value .value-card .card .card-title {
+    font-family: 'Blibli_Bold';
+    margin-bottom: 10px;
+}
+#value .value-card .card .card-text {
+    font-family: 'Blibli_Medium';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+#value .value-card .card:hover {
+    background-color : white;
+    transform: scale(1.2);
+    color:#0072FF;
+}
+#value .value-card .card:hover * {
+    color:#0072FF;
+    transition: inherit;
+}
+#value .value-card .card:hover .running {
+    content: url('/assets/img/running-blue.svg');
+    transition: inherit;
+}
+#value .value-card .card:hover .hands {
+    content: url('/assets/img/hands-blue.svg');
+    transition: inherit;
+}
+#value .value-card .card:hover .circle {
+    content: url('/assets/img/circle-blue.svg');
+    transition: inherit;
+}
+#project .project-banner {
+    display: flex;
+}
+#project .project-banner .project-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 50%;
+    background-image: url(/assets/img/bg-project.webp);
+    background-size: cover;
+    padding: 36px;
+}
+#project .project-banner .project-container .project-text {
+    display: flex;
+    flex: 50%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#project .project-banner .project-container .project-text .container-text {
+    width: 420px;
+}
+#project .project-banner .project-container .project-text .container-vendor-client {
+    display: flex;
+    width: 420px;
+    gap: 33px;
+    align-items: center;
+}
+#project .project-banner .project-container .project-text .container-vendor-client .project-img .d-flex {
+    gap: 10px;
+}
+#project .project-banner .project-container .project-text .container-vendor-client .number-project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+#project .project-banner .project-container .project-text .container-vendor-client .number-project h1 {
+    margin-bottom: 0;
+    font-family: 'Blibli_Bold';
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 22px;
+    color: var(--primaryBlue);
+}
+#project .project-banner .project-container .project-text .container-vendor-client .number-project p {
+    margin-bottom: 0;
+    font-family: 'Blibli_Bold';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: white;
+}
+#project .project-banner .project-container .project-text .container-text h2.sub-title {
+    font-family: 'Blibli_Bold';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 30px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+#project .project-banner .project-container .project-text .container-text h2.title {
+    font-family: 'Blibli_Bold';
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 45px;
+    color: white;
+    text-transform: capitalize;
+    color: var(--primaryBlue);
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+#project .project-banner .project-logo {
+    flex: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#project .project-banner .project-logo img {
+    height: 80px;
+    width: 130px;
+    display: block;
+    margin: auto;
+}
+#contact .contact-banner {
+    background-image: url('/assets/img/bg-call.webp');
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+}
+#contact .contact-banner .contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px;
+    color: white;
+    gap: 25px;
+}
+#contact .contact-banner .contact-container h2 {
+    text-transform: capitalize;
+    font-family: 'Outfit';
+    font-weight: 700;
+    line-height: 50px;
+    font-size: 44px;
+    margin-bottom: 0;
+}
+#contact .contact-banner .contact-container p {
+    text-transform: capitalize;
+    font-family: 'Outfit';
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 20px;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+#contact .contact-banner .contact-container p.email {
+    text-transform: lowercase !important;
+    font-size: 16px;
+}
+#contact .contact-banner .contact-container p i {
+    margin-right: 5px;
+}
+#contact .contact-banner .contact-container button {
+    width: 120px;
+    border-radius: 8px;
+}
+footer {
+    background-image: url('/assets/img/bg-footer.webp');
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+}
+footer .footer-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 125px;
+    padding: 71px;
+}
+footer .footer-container .footer-logo, footer .footer-container .footer-info, footer .footer-container .footer-links {
+    width: 240px;
+}
+footer .footer-logo img {
+    margin-bottom: 17px;
+}
+footer .footer-logo p {
+    color: var(--primaryBlack);
+    margin-bottom: 5px;
+}
+footer .footer-container hr.line {
+    width: 30px;
+    border: 2px solid var(--primaryYellow);
+    opacity: 1;
+}
+footer .footer-container span {
+    color: var(--primaryDarkBlue);
+    font-size: 1.25rem
+}
+footer .footer-container .footer-info p, footer .footer-container .footer-links a, footer .footer-container .footer-info a {
+    color: var(--primaryMutedBlack);
+    text-decoration: none;
+}
+footer .footer-container .footer-links a {
+    cursor: pointer;
+}
+footer .footer-container .footer-links .d-flex {
+    flex-direction: column;
+    gap: 10px;
+}
+footer .copyright-container {
+    padding: 10px;
+    border-top: 1px solid #E1E3E4;
+}
+footer .copyright-container p {
+    color: #9D9D9D;
+    font-family: 'Outfit';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+@media screen and (max-width: 729px) {
+    header .header-blue, .header-white {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    header .header-blue {
+        flex-direction: column;
+    }
+    header .header-white {
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+    header .header-white .menus .nav-item {
+        display: block;
+        width: 100%;
+    }
+    header .header-white .menus {
+        padding: 10px;
+        gap: 0;
+    }
+    header .header-white .menus a {
+        background: #d3d3d357;
+        border-radius: 5px;
+        display: block;
+        margin-bottom: 10px;
+        padding: 10px !important;
+    }
+    header .header-white .menus .nav-item:hover {
+        width: 100%;
+        text-align: left;
+        border-radius: 5px;
+    }
+    #home .container .text-banner {
+        width: 70%;
+    }
+    #home .container {
+        padding: 100px 0px 100px 50px;
+    }
+    #home .container .text-banner h1 {
+        line-height: normal;
+        font-size: 25px;
+    }
+    #home .container .text-banner h3 {
+        font-size: 13px;
+        line-height: 20px;
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+    #about .about-banner {
+        background-image: url('../img/bg\ 2.webp');
+    }
+    #about .about-banner .banner-container {
+        flex-direction: column;
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+
+    #about .about-banner .banner-container .img-about {
+        width: 70%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    #about .about-banner .banner-container .about-text {
+        padding: 0px 35px;
+        width: 100%;
+    }
+    #about .about-banner .banner-container .about-text .text-title {
+        font-size: 13px;
+    }
+    #about .about-banner .banner-container .about-text article h1 {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 32px;
+    }
+    #about .about-banner .banner-container .about-text article p {
+        font-size: 14px;
+    }
+    #vision .vision-banner {
+        padding-bottom: 50px;
+        padding-top: 30px;
+    }
+    #vision .vision-banner .vision-container .img-visi {
+        width: 75%;
+    }
+    #vision .vision-banner .vision-container {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    #vision .vision-banner .vision-container .vision-text {
+        width: 100%;
+        padding: 0px 35px;
+    }
+    #vision .vision-banner .vision-container .vision-text h2.text-title {
+        font-size: 13px;
+    }
+    #vision .vision-banner .vision-container .vision-text h2.header-title {
+        font-size: 30px;
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+    #vision .vision-banner .vision-container .vision-text article p.content {
+        padding-left: 0px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    #value .value-banner .value-container .value-text article h2.title {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        font-size: 30px;
+    }
+    #vision .vision-banner .vision-container .vision-text article h3.sub-title {
+        margin-bottom: 20px;
+    }
+    #value .value-banner .value-container .value-text article p.text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    #value .value-banner .value-container {
+        padding: 35px;
+        height: 100%;
+        display: flex;
+    }
+    #value .value-banner .value-container .value-text article {
+        width: 100%;
+        margin-left: 0;
+    }
+    #value .value-card {
+        flex-direction: column;
+        gap: 35px;
+        margin-top: 45px;
+        align-items: center;
+    }
+    #value .value-card .card:hover {
+        transform: scale(1.1);
+    }
+    #project .project-banner {
+        flex-direction: column;
+    }
+    #project .project-banner .project-container {
+        flex-direction: column;
+    }
+    #project .project-banner .project-container .project-text .container-text {
+        width: 100%;
+    }
+    #project .project-banner .project-container .project-text .container-vendor-client {
+        width: 100%;
+    }
+    #project .project-banner .project-container .project-text .container-text h2.title {
+        font-size: 30px;
+        margin-bottom: 30px;
+        margin-top: 10px;
+    }
+    #project .project-banner .project-container .project-text .container-vendor-client img {
+        width: 35%;
+    }
+    #project .project-banner .project-container .project-text .container-vendor-client .number-project h1 {
+        font-size: 30px;
+    }
+    #project .project-banner .project-container .project-text .container-vendor-client .number-project p {
+        font-size: 14px;
+    }
+    footer .footer-container {
+        gap: 50px;
+        padding: 55px;
+        flex-direction: column;
+    }
+    #contact .contact-banner .contact-container h2 {
+        font-size: 35px;
+    }
+}
